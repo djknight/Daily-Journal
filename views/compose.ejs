@@ -1,6 +1,7 @@
 <%- include("partials/header.ejs"); -%>
 <h1>Compose</h1>
 <form class="" action="/compose" method="post">
+<<<<<<< HEAD
   <div class="form-group">
     <label>Title</label>
     <input class="form-control" type="text" name="postTitle" />
@@ -9,6 +10,16 @@
     <br />
     <button type="submit" name="button">Publish</button>
   </div>
+=======
+  <div>
+    <h4>Title</h4>
+    <input type="text" name="postTitle" />
+  </div>
+  <h4>Post</h4>
+  <textarea id="textComp" name="textarea" rows="4" cols="50"></textarea>
+  <br />
+  <button type="submit" name="button">Publish</button>
+>>>>>>> 7992d55aba3a7ceadd046cb25ab6d020037c4381
 </form>
 
 <%- include("partials/footer.ejs"); -%>
