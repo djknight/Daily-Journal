@@ -1,5 +1,5 @@
 {
-  "name": "ejs-challenge",
+  "name": "ejs-journal",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,7 +11,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^2.6.1",
-    "express": "^4.16.3",
+    "express": "^4.17.1",
     "lodash": "^4.17.21"
   }
 }
