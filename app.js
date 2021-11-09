@@ -17,8 +17,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 //global arr
-let posts = []
-app.get("/", function (req, res) { res.render("home", { startingContent: homeStartingContent, posts: posts }); });
+let posts = [];
+app.get("/", function (req, res) {
+  res.render("home", { startingContent: homeStartingContent, posts: posts });
+});
 
 app.get("/about", function (req, res) {
   res.render("about", { aboutContent: aboutContent });
@@ -34,8 +36,8 @@ app.get("/compose", function (req, res) {
 app.post("/compose", function (req, res) {
   const post = {
     title: req.body.postTitle,
-    content: req.body.postBody
-  };// redirect to post
+    content: req.body.postBody,
+  }; // redirect to post
   posts.push(post);
   res.redirect("/");
 });
