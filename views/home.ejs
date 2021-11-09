@@ -1,5 +1,9 @@
 <%- include("partials/header.ejs"); -%>
-<h1>Hello</h1>
+    <h1>Hello</h1>
+    <p>
+        <%= startingContent %>
+    </p>
 
-<p><%= startingContent %></p>
-<%- include("partials/footer.ejs"); -%>
+    <% for (var i=0; i < posts.lenght; i++) console.log(posts[i].title); %>
+
+        <%- include("partials/footer.ejs"); -%>
