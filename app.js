@@ -41,6 +41,21 @@ app.post("/compose", function (req, res) {
   posts.push(post);
   res.redirect("/");
 });
+// store posts for redirect link
+app.get("/posts/:postName", (req, res) => {
+  const requestedTitle = (req.params.postName)
+
+  posts.forEach(function (post) {
+    const storedTitle = post.title;
+
+    //testing store
+    if (storedTitle === requestedTitle){
+      console.log ("Ayyy match found")
+    }
+  })
+
+});
+
 
 app.listen(3000, function () {
   console.log("Server started on http://localhost:3000/");
