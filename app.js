@@ -51,6 +51,12 @@ app.get("/posts/:postName", (req, res) => {
 
     //testing store
     if (storedTitle === requestedTitle) {
+      res.render("post", {
+        title: post.title,
+        content: post.content
+      });
+
+
       console.log("Ayyy match found")
     } else {
       console.log("Not a match =(")
